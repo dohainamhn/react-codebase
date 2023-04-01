@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+yarn lint-staged && pwd && chmod 755 ./.husky/check-branch-name.sh && bash ./.husky/check-branch-name.sh
