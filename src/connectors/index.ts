@@ -6,7 +6,7 @@ export enum ConnectorNames {
   WalletConnect = 'walletconnect',
   Unsupported = 'Unsupported',
 }
-
+console.log('process.env',process.env);
 export const injectedConnector = new InjectedConnector({
   supportedChainIds: [Number(process.env.NEXT_PUBLIC_CHAIN_ID || 5)],
 });
