@@ -56,7 +56,7 @@ const commonConfigs = {
       ],
     }),
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify(dotenv.config().parsed),
+      'process.env': JSON.stringify(dotenv.config().parsed) || {},
     }),
   ],
 };
