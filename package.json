@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": ".",
   "scripts": {
     "start": "webpack serve --config ./webpack/webpack.config.js --env mode=dev",
     "build": "yarn lint && webpack --config ./webpack/webpack.config.js --progress --env mode=prod",

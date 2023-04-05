@@ -6,7 +6,7 @@ import { App } from 'App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from 'stores';
-console.log('App',App);
+
 function getLibrary(provider: any) {
   return new Web3Provider(provider);
 }

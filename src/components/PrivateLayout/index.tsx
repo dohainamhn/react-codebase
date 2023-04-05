@@ -13,6 +13,7 @@ const PrivateLayout = ({ children }: Props) => {
   const auth = useAppSelector((state) => state.auth.isLogin);
   const dispatch = useAppDispatch();
   const { deactivate } = useWeb3React();
+
   return auth ? (
     <div>
       <Button
