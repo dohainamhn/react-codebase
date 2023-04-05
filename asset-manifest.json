@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-codebase/static/css/main.7aeacaf4.css",
+    "main.js": "/react-codebase/static/js/main.b5477be0.js",
+    "static/js/563.b816fbdc.chunk.js": "/react-codebase/static/js/563.b816fbdc.chunk.js",
+    "static/js/746.90609355.chunk.js": "/react-codebase/static/js/746.90609355.chunk.js",
+    "static/media/default-nft.svg": "/react-codebase/static/media/default-nft.a4acee4e998038c46628c1fdc6e11803.svg",
+    "logo512.png": "/react-codebase/logo512.png",
+    "logo192.png": "/react-codebase/logo192.png",
+    "favicon.ico": "/react-codebase/favicon.ico",
+    "index.html": "/react-codebase/index.html",
+    "manifest.json": "/react-codebase/manifest.json"
+  },
+  "entrypoints": [
+    "static/css/main.7aeacaf4.css",
+    "static/js/main.b5477be0.js"
+  ]
+}
