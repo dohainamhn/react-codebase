@@ -1,15 +1,3 @@
-declare module '@mui/material/styles' {
-  interface BreakpointOverrides {
-    xs: true;
-    xxs: true;
-    xss: true;
-    sm: true;
-    md: true;
-    lg: true;
-    xl: true;
-  }
-}
-
 export const themeConfig = {
   palette: {
     // mode: localStorage.getItem('themeMode') || 'light',
