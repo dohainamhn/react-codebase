@@ -9,7 +9,7 @@
     "build": "yarn lint && webpack --config ./webpack/webpack.config.js --progress --env mode=prod",
     "start:prod": "serve -s build",
     "help": "webpack --help",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json} --fix",
+    "lint": "eslint src/**/*.{ts,tsx} --fix",
     "prepare": "husky install"
   },
   "author": "",
