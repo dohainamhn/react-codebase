@@ -6,11 +6,9 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const PublicLayout = ({ children }: Props) => {
+const AuthLayout = ({ children }: Props) => {
   const auth = useAppSelector((state) => state.auth.isLogin);
-  console.log('zoday2');
-
   return !auth ? <div>{children}</div> : <Navigate to="/" />;
 };
 
-export default PublicLayout;
+export default AuthLayout;

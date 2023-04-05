@@ -1,9 +1,9 @@
 const path = require('path');
 const dotenv = require('dotenv');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const commonConfigs = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),

@@ -3,21 +3,28 @@ import Home from 'pages/Home';
 import Login from 'pages/Login';
 import NotFound from 'pages/NotFound';
 import { useRoutes } from 'react-router-dom';
+import AuthLayout from 'components/PublicLayout';
+import PrivateLayout from 'components/PrivateLayout';
 
-export default function Router() {
+export default function Routers() {
   const elements = useRoutes([
     {
-      path: 'login',
-        
-      element: <Login />,
-      
-      // children: [
-      //   { index: true, element: <BestSeller /> },
-      //   { path: 'laptop', element: <Laptop /> },
-      //   { path: 'desktop', element: <Desktop /> }
-      // ]
+      path: '/login',
+
+      element: (
+        <AuthLayout>
+          <Login />
+        </AuthLayout>
+      ),
     },
-    { path: '/', element: <Home />, },
+    {
+      path: '/',
+      element: (
+        <PrivateLayout>
+          <Home />
+        </PrivateLayout>
+      ),
+    },
 
     { path: '*', element: <NotFound /> },
   ]);

@@ -1,5 +1,10 @@
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const getPublicPath = require('./utils/getPublicPath');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const InterpolateHtmlPlugin = require('./utils/InterpolateHtmlPlugin');
+
+const publicPath = getPublicPath(false);
 
 module.exports = {
   mode: 'development',
@@ -29,5 +34,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ReactRefreshWebpackPlugin()],
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+    new InterpolateHtmlPlugin(HtmlWebpackPlugin, {
+      PUBLIC_URL: publicPath.slice(0, -1),
+    }),
+  ],
 };

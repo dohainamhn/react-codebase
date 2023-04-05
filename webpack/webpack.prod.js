@@ -1,23 +1,16 @@
+const path = require('path');
+
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
-const fs = require('fs');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const getPublicUrlOrPath = require('./utils/getPublicUrlOrPath');
 const InterpolateHtmlPlugin = require('./utils/InterpolateHtmlPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const getPublicPath = require('./utils/getPublicPath');
 
-const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
-const publicPath = getPublicUrlOrPath(
-  true,
-  require(resolveApp('package.json')).homepage,
-  process.env.PUBLIC_URL,
-);
-
+const publicPath = getPublicPath(true);
 console.log('publicPath', publicPath);
 
 module.exports = {
