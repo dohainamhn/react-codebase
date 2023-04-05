@@ -8,10 +8,11 @@ import NotFound from 'pages/NotFound';
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
 import { themeConfig } from 'theme';
-import './style.css';
+import './styles/index.css';
 
 export const App = () => {
   useEagerConnect();
+
   const theme = React.useMemo(
     () =>
       createTheme({
@@ -32,6 +33,7 @@ export const App = () => {
       }),
     [],
   );
+
   const elements = useRoutes([
     {
       path: '/login',
@@ -59,5 +61,6 @@ export const App = () => {
 
     { path: '*', element: <NotFound /> },
   ]);
+
   return <ThemeProvider theme={theme}>{elements}</ThemeProvider>;
 };

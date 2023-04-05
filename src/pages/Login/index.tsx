@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core';
 import { injectedConnector } from 'connectors';
 import { setIsLogin } from 'stores/reducers';
 import { useAppDispatch, useAppSelector } from 'stores/types';
-
+import Logo from 'assets/images/default-nft.svg';
 const CustomButton = styled(Button)<ButtonProps>({});
 
 const LoginPage = () => {
@@ -22,6 +22,7 @@ const LoginPage = () => {
       >
         login
       </CustomButton>
+      <img src={Logo}/>
     </div>
   );
 };

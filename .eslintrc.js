@@ -20,7 +20,8 @@ module.exports = {
   rules: {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
-    "no-empty": "off"
+    "no-empty": "off",
+    "@typescript-eslint/no-unused-vars": ['error']
   },
   settings: {
     react: {
